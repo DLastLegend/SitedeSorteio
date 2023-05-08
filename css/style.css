@@ -21,13 +21,13 @@ body {
 }
 
 .container {
-    padding: 20px;
+    padding: 2vw 4vw;
     border-radius: 15px;
     background-color: aliceblue;
     position: relative;
     z-index: 3;
-    min-height: 60vh;
-    min-width: 30vw;
+    min-height: auto;
+    min-width: 25vw;
     max-width: 1156px;
 }
 

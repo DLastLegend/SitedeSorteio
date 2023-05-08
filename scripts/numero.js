@@ -24,6 +24,7 @@ function sortear() {
       if (numerosSorteados.indexOf(i) == -1) {
         numerosDisponiveis.push(i);
       }
+      
     }
     
     if (numerosDisponiveis.length == 0) {
