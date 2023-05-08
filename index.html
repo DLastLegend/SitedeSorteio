@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Sorteio</title>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="container">
+        <div class="center-title">
+            <span>Alternar modo</span>
+            <div class="checkbox-apple">
+                <span>
+                    <input class="yep" id="opcao" type="checkbox">
+                    <label for="opcao"></label>
+                </span>
+            </div>
+        </div>
+        <form id="sorteio-numeros">
+            <h1>Sorteio de Numero:</h1>
+            <br>
+            <label for="min"></label>
+            <input type="number" id="min" name="min" placeholder="Digite o valor mínimo" autocomplete="off"/><br /><br />
+            <label for="max"></label>
+            <input type="number" id="max" name="max" placeholder="Digite o valor máximo" autocomplete="off"/><br /><br />
+            <input type="text" id="resultado" name="resultado" disabled><br>
+            <span class="center-check">
+                <p>Não repetir número</p>
+                <div class="checkbox-apple">
+                    <span>
+                        <input class="yep" id="checkbox" type="checkbox" name="checkbox">
+                        <label for="checkbox"></label>
+                    </span>
+                </div>
+            </span>
+            <div class="container-sortear">
+                <button type="button" onclick="sortear()" class="sortear-button"><span>Sortear</span></button>
+                <button type="button" onclick="limparCampo()" class="btn-limpa"><span>Limpar</span></button>
+            </div>
+        </form>
+
+        <form id="sorteio-nomes" style="display:none">
+            <h1>Sorteio de Nome:</h1>
+            <br>
+            <div class="input-group">
+                <input  type="text" id="nome" name="nome" placeholder="Digite um nome" autocomplete="off">
+                <button class="submit-button" type="button" onclick="adicionarNome()"><span>➕</span></button>
+            </div><br>
+            <ul id="lista-nomes"></ul><br>
+            <input type="text" id="nome-sorteado" name="nome-sorteado" placeholder="Nome sorteado" autocomplete="off" disabled readonly /><br>
+            <span class="center-check">
+                <p>Não repetir nome</p>
+                <div class="checkbox-apple">
+                    <span>
+                        <input class="yep" id="sem-repeticao" type="checkbox" name="checkbox">
+                        <label for="sem-repeticao"></label>
+                    </span>
+                </div>
+            </span>
+            <div class="container-sortear">
+                <button type="button" onclick="sortearNome()" class="sortear-button"><span>Sortear</span></button>
+                <button type="button" onclick="limparCampoNome()" class="btn-limpa"><span>Limpar</span></button>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="scripts/limpa.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/nome.js"></script>
+    <script src="scripts/numero.js"></script>
+</body>
+</html>
